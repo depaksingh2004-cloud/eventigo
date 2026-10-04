@@ -10,9 +10,7 @@ import {
     bookevent,
     getmybookings,
     getallbookings,
-    cancelbooking,
-    createPaymentOrder,
-    verifyPayment
+    cancelbooking
 } from "../controllers/booking.controller.js";
 
 const router = express.Router();
@@ -60,28 +58,6 @@ router.get(
     protect,
     admin,
     getallbookings
-);
-
-
-// ==========================================
-// CREATE RAZORPAY PAYMENT ORDER
-// ==========================================
-
-router.post(
-    "/:id/payment/order",
-    protect,
-    createPaymentOrder
-);
-
-
-// ==========================================
-// VERIFY RAZORPAY PAYMENT
-// ==========================================
-
-router.post(
-    "/:id/payment/verify",
-    protect,
-    verifyPayment
 );
 
 
