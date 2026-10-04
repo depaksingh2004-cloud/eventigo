@@ -37,15 +37,13 @@ const Home = () => {
           : {},
       });
 
-      console.log('EVENT API RESPONSE:', response.data);
-
       const data = response.data;
 
       const fetchedEvents = Array.isArray(data)
         ? data
         : Array.isArray(data?.events)
-        ? data.events
-        : [];
+          ? data.events
+          : [];
 
       setEvents(fetchedEvents);
     } catch (error) {
@@ -89,7 +87,6 @@ const Home = () => {
             Welcome to Eventigo
           </span>
 
-
           {/* Heading */}
 
           <h1 className="mb-6 text-5xl font-black leading-tight tracking-tight md:text-7xl">
@@ -105,7 +102,6 @@ const Home = () => {
 
           </h1>
 
-
           {/* Description */}
 
           <p className="mx-auto mb-10 max-w-2xl text-lg font-medium leading-relaxed text-gray-600 md:text-xl">
@@ -113,7 +109,6 @@ const Home = () => {
             and hands-on workshops happening directly in your area.
             Secure your spot today.
           </p>
-
 
           {/* Search */}
 
@@ -133,7 +128,6 @@ const Home = () => {
 
         </div>
       </div>
-
 
       {/* =========================================
           WHY CHOOSE US
@@ -160,7 +154,6 @@ const Home = () => {
 
         </div>
 
-
         {/* Seamless Access */}
 
         <div className="group flex flex-col items-center rounded-2xl border border-purple-100 bg-white p-8 text-center shadow-sm transition duration-300 hover:-translate-y-1 hover:border-purple-200 hover:shadow-lg">
@@ -180,12 +173,11 @@ const Home = () => {
 
         </div>
 
-
         {/* Secure Platform */}
 
         <div className="group flex flex-col items-center rounded-2xl border border-emerald-100 bg-white p-8 text-center shadow-sm transition duration-300 hover:-translate-y-1 hover:border-emerald-200 hover:shadow-lg">
 
-          <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-emerald-100 text-2xl text-emerald-600 shadow-sm transition group-hover:bg-emerald-600 group-hover:text-white">
+          <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-white p-8 text-center shadow-sm transition duration-300 hover:-translate-y-1 hover:border-emerald-200 hover:shadow-lg">
             <FaShieldAlt />
           </div>
 
@@ -201,7 +193,6 @@ const Home = () => {
         </div>
 
       </div>
-
 
       {/* =========================================
           UPCOMING EVENTS HEADER
@@ -219,7 +210,6 @@ const Home = () => {
 
       </div>
 
-
       {/* =========================================
           LOADING
       ========================================= */}
@@ -229,7 +219,6 @@ const Home = () => {
           Loading events...
         </div>
       )}
-
 
       {/* =========================================
           NO EVENTS
@@ -252,7 +241,6 @@ const Home = () => {
 
         </div>
       )}
-
 
       {/* =========================================
           EVENT CARDS
@@ -304,7 +292,6 @@ const Home = () => {
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/5 to-transparent" />
 
-
                   {/* Category */}
 
                   {event.category && (
@@ -312,7 +299,6 @@ const Home = () => {
                       {event.category}
                     </span>
                   )}
-
 
                   {/* Price */}
 
@@ -329,7 +315,6 @@ const Home = () => {
                     )}
 
                   </div>
-
 
                   {/* Location */}
 
@@ -354,7 +339,6 @@ const Home = () => {
 
                 </div>
 
-
                 {/* EVENT CONTENT */}
 
                 <div className="flex flex-grow flex-col p-6">
@@ -363,18 +347,15 @@ const Home = () => {
                     {event.category || 'Event'}
                   </div>
 
-
                   <h2 className="mb-3 text-xl font-bold text-gray-900">
                     {event.title || 'Untitled Event'}
                   </h2>
-
 
                   {event.description && (
                     <p className="mb-4 line-clamp-2 text-sm leading-relaxed text-gray-500">
                       {event.description}
                     </p>
                   )}
-
 
                   {/* Date */}
 
@@ -398,7 +379,6 @@ const Home = () => {
 
                   </div>
 
-
                   {/* Location */}
 
                   <div className="mb-4 flex items-center gap-2 text-sm text-gray-600">
@@ -415,7 +395,6 @@ const Home = () => {
                     </span>
 
                   </div>
-
 
                   {/* Seats */}
 
@@ -442,7 +421,6 @@ const Home = () => {
 
                     </p>
 
-
                     {/* View Details */}
 
                     <button
@@ -467,7 +445,6 @@ const Home = () => {
         </div>
 
       )}
-
 
       {/* =========================================
           FOOTER
